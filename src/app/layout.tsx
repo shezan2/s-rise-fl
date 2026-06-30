@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Anton } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import Navbar from "@/components/Navbar";
 import "./globals.css";
 
@@ -35,6 +36,7 @@ export default function RootLayout({
         <footer className="bg-black border-t border-white/10 py-6 text-center text-gray-500 text-sm">
           &copy; {new Date().getFullYear()} S-RISE FL. All rights reserved.
         </footer>
+        <SpeedInsights />
       </body>
     </html>
   );
