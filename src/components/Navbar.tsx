@@ -7,7 +7,7 @@ import { Menu, X, Trophy } from "lucide-react";
 
 const NAV_LINKS = [
   { name: "Home", href: "/" },
-  { name: "Standings", href: "/standings" },
+  { name: "Bracket", href: "/bracket" },
   { name: "Matches", href: "/matches" },
   { name: "Teams", href: "/teams" },
   { name: "Stats", href: "/stats" },

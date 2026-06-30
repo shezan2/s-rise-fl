@@ -7,11 +7,9 @@ import MatchRow, { MatchData } from "@/components/MatchRow";
 import TeamBadge from "@/components/TeamBadge";
 
 export default function Home() {
-  const top4Teams = teams.sort((a, b) => a.position - b.position).slice(0, 4);
-  
-  // Find upcoming matches
   const upcomingMatches = matches
-    .filter((m) => m.status === "upcoming")
+    .filter((m) => m.status === "upcoming" || m.status === "live")
+    .slice(0, 3)
     .slice(0, 2)
     .map((m): MatchData => {
       const homeTeam = teams.find((t) => t.id === m.homeTeamId)!;
@@ -57,57 +55,18 @@ export default function Home() {
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
             <Link
-              href="/standings"
+              href="/bracket"
               className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white uppercase tracking-wider border-2 border-white/20 hover:border-white hover:bg-white/5 transition-colors rounded-none"
             >
-              View Standings
+              View Bracket
             </Link>
           </div>
         </div>
       </section>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 w-full space-y-24">
-        {/* Standings Preview & Upcoming Fixtures */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Top 4 Standings */}
-          <section>
-            <div className="flex items-center justify-between mb-6">
-              <h2 className="font-anton text-3xl text-white uppercase tracking-wider flex items-center gap-3">
-                <Trophy className="w-8 h-8 text-yellow-500" />
-                League Leaders
-              </h2>
-              <Link href="/standings" className="text-sm text-yellow-500 hover:text-yellow-400 font-bold uppercase tracking-wider">
-                Full Table →
-              </Link>
-            </div>
-            <div className="bg-neutral-900 border border-white/10 rounded-xl overflow-hidden">
-              <table className="w-full text-left border-collapse">
-                <thead>
-                  <tr className="bg-neutral-950 border-b border-white/10 text-neutral-400 text-xs uppercase tracking-wider">
-                    <th className="p-4 font-semibold w-16 text-center">Pos</th>
-                    <th className="p-4 font-semibold">Club</th>
-                    <th className="p-4 font-semibold text-center">P</th>
-                    <th className="p-4 font-semibold text-center">Pts</th>
-                  </tr>
-                </thead>
-                <tbody className="text-sm">
-                  {top4Teams.map((team, idx) => (
-                    <tr key={team.id} className="border-b border-white/5 last:border-0 hover:bg-white/5">
-                      <td className="p-4 font-anton text-xl text-center">
-                        <span className={idx === 0 ? "text-yellow-500" : "text-white"}>{team.position}</span>
-                      </td>
-                      <td className="p-4 font-bold flex items-center gap-3">
-                        <TeamBadge initials={team.badgeInitials} accentColor={team.accentColor} className="w-8 h-8 text-sm" />
-                        {team.name}
-                      </td>
-                      <td className="p-4 text-neutral-400 text-center">{team.played}</td>
-                      <td className="p-4 font-bold text-center text-lg">{team.points}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </section>
+        {/* Tournament Info & Upcoming Fixtures */}
+        <div className="flex flex-col gap-12">
 
           {/* Upcoming Matches */}
           <section>

@@ -16,6 +16,7 @@ export interface MatchData {
   homeScore?: number;
   awayScore?: number;
   time: string;
+  stage?: string;
   state: MatchState;
 }
 
@@ -36,8 +37,14 @@ export default function MatchRow({ match, className }: MatchRowProps) {
         {match.state === 'live' && (
           <span className="text-primary text-sm font-bold animate-pulse mb-1 tracking-widest">LIVE</span>
         )}
+        {(match.state === 'completed' || match.state === 'live') && match.stage && (
+          <span className="text-gray-400 font-sans font-medium text-xs mb-1 uppercase tracking-widest">{match.stage}</span>
+        )}
         {match.state === 'upcoming' && (
-          <span className="text-gray-400 font-sans font-medium text-sm">{match.time}</span>
+          <span className="text-gray-400 font-sans font-medium text-sm text-center">
+            {match.stage && <span className="block text-xs uppercase tracking-widest mb-1">{match.stage}</span>}
+            {match.time}
+          </span>
         )}
         {(match.state === 'completed' || match.state === 'live') && (
           <div className="font-anton text-3xl flex items-center gap-2">

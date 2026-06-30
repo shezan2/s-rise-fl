@@ -136,7 +136,7 @@ export default async function PlayerPage({
                       <div>
                         <div className="text-xl font-bold">vs {opponent?.name || 'Unknown'}</div>
                         <div className="text-sm text-zinc-400 mt-1 uppercase tracking-widest font-bold">
-                          {isHome ? 'Home' : 'Away'} • Matchday {event.match.matchday}
+                          {isHome ? 'Home' : 'Away'} • {event.match.stage || 'Match'}
                         </div>
                       </div>
                     </div>

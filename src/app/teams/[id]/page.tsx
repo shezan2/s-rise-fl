@@ -45,25 +45,6 @@ export default async function TeamPage({ params }: { params: Promise<{ id: strin
               <p className="text-gray-500 mt-1">{team.stadiumName}</p>
             </div>
 
-            {/* Stats Overview */}
-            <div className="flex gap-4 md:gap-8 bg-black/30 p-6 rounded-2xl border border-white/5">
-              <div className="text-center">
-                <p className="text-gray-400 text-xs font-bold uppercase tracking-widest mb-1">Pos</p>
-                <p className="font-anton text-4xl" style={{ color: team.accentColor }}>{team.position}</p>
-              </div>
-              <div className="text-center">
-                <p className="text-gray-400 text-xs font-bold uppercase tracking-widest mb-1">Pts</p>
-                <p className="font-anton text-4xl text-white">{team.points}</p>
-              </div>
-              <div className="text-center">
-                <p className="text-gray-400 text-xs font-bold uppercase tracking-widest mb-1">GF</p>
-                <p className="font-anton text-4xl text-green-400">{team.goalsFor}</p>
-              </div>
-              <div className="text-center">
-                <p className="text-gray-400 text-xs font-bold uppercase tracking-widest mb-1">GA</p>
-                <p className="font-anton text-4xl text-red-400">{team.goalsAgainst}</p>
-              </div>
-            </div>
           </div>
         </div>
       </div>
