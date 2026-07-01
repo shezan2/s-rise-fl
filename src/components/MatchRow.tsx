@@ -27,7 +27,7 @@ interface MatchRowProps {
 
 export default function MatchRow({ match, className }: MatchRowProps) {
   return (
-    <div className={cn("flex items-center justify-between p-4 border-b border-white/10 bg-black hover:bg-white/5 transition-colors", className)}>
+    <div className={cn("flex items-center justify-between p-4 border-b-[0.5px] border-white/10 bg-black hover:bg-white/5 transition-colors", className)}>
       <div className="flex items-center gap-4 flex-1">
         <TeamBadge initials={match.homeTeam.initials} accentColor={match.homeTeam.accentColor} />
         <span className="font-sans font-bold text-lg hidden sm:block truncate">{match.homeTeam.name}</span>

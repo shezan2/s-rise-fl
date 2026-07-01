@@ -84,14 +84,14 @@ export default function StatsPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-end">
             {/* 2nd Place */}
             {topPerformers[1] && (
-              <Link href={`/players/${topPerformers[1].id}`} className="group block order-2 md:order-1 transform transition hover:-translate-y-2">
-                <div className="bg-zinc-900/50 border border-white/10 rounded-2xl p-6 relative overflow-hidden h-[280px] flex flex-col justify-end">
+              <Link href={`/players/${topPerformers[1].id}`} className="group block order-2 md:order-1 transform transition hover:-translate-y-1">
+                <div className="bg-zinc-900/30 border-[0.5px] border-white/10 hover:border-white/30 rounded-2xl p-6 relative overflow-hidden h-[280px] flex flex-col justify-end transition-colors">
                   <div className="absolute top-4 right-4 text-6xl font-black text-white/5 group-hover:text-white/10 transition-colors">2</div>
                   <div className="relative z-10">
-                    <span className="text-3xl font-black text-amber-400 block mb-1">{topPerformers[1][topMode]}</span>
-                    <span className="text-sm text-zinc-500 uppercase font-bold tracking-wider block mb-4">{topMode}</span>
-                    <h3 className="text-2xl font-bold">{topPerformers[1].name}</h3>
-                    <p className="text-zinc-400">{getTeam(topPerformers[1].teamId)?.name}</p>
+                    <span className="text-3xl font-black text-zinc-300 block mb-1">{topPerformers[1][topMode]}</span>
+                    <span className="text-sm text-zinc-500 uppercase font-bold tracking-widest block mb-4">{topMode}</span>
+                    <h3 className="text-xl font-bold uppercase tracking-wide">{topPerformers[1].name}</h3>
+                    <p className="text-zinc-500 font-medium text-sm">{getTeam(topPerformers[1].teamId)?.name}</p>
                   </div>
                 </div>
               </Link>
@@ -99,14 +99,14 @@ export default function StatsPage() {
 
             {/* 1st Place */}
             {topPerformers[0] && (
-              <Link href={`/players/${topPerformers[0].id}`} className="group block order-1 md:order-2 transform transition hover:-translate-y-2">
-                <div className="bg-gradient-to-t from-red-950 to-zinc-900 border border-red-500/30 rounded-2xl p-8 relative overflow-hidden h-[320px] flex flex-col justify-end ring-1 ring-inset ring-white/10 shadow-2xl shadow-red-900/20">
+              <Link href={`/players/${topPerformers[0].id}`} className="group block order-1 md:order-2 transform transition hover:-translate-y-1">
+                <div className="bg-zinc-900/60 border-[0.5px] border-white/20 hover:border-white/40 rounded-2xl p-8 relative overflow-hidden h-[320px] flex flex-col justify-end transition-colors">
                   <div className="absolute top-4 right-4 text-8xl font-black text-white/5 group-hover:text-white/10 transition-colors">1</div>
                   <div className="relative z-10">
-                    <span className="text-5xl font-black text-amber-400 block mb-2">{topPerformers[0][topMode]}</span>
-                    <span className="text-sm text-zinc-400 uppercase font-bold tracking-wider block mb-6">{topMode}</span>
-                    <h3 className="text-3xl font-bold">{topPerformers[0].name}</h3>
-                    <p className="text-zinc-300">{getTeam(topPerformers[0].teamId)?.name}</p>
+                    <span className="text-5xl font-black text-white block mb-2">{topPerformers[0][topMode]}</span>
+                    <span className="text-sm text-zinc-500 uppercase font-bold tracking-widest block mb-6">{topMode}</span>
+                    <h3 className="text-2xl font-bold uppercase tracking-wide">{topPerformers[0].name}</h3>
+                    <p className="text-zinc-400 font-medium text-sm">{getTeam(topPerformers[0].teamId)?.name}</p>
                   </div>
                 </div>
               </Link>
@@ -114,14 +114,14 @@ export default function StatsPage() {
 
             {/* 3rd Place */}
             {topPerformers[2] && (
-              <Link href={`/players/${topPerformers[2].id}`} className="group block order-3 transform transition hover:-translate-y-2">
-                <div className="bg-zinc-900/50 border border-white/10 rounded-2xl p-6 relative overflow-hidden h-[260px] flex flex-col justify-end">
+              <Link href={`/players/${topPerformers[2].id}`} className="group block order-3 transform transition hover:-translate-y-1">
+                <div className="bg-zinc-900/30 border-[0.5px] border-white/10 hover:border-white/30 rounded-2xl p-6 relative overflow-hidden h-[260px] flex flex-col justify-end transition-colors">
                   <div className="absolute top-4 right-4 text-6xl font-black text-white/5 group-hover:text-white/10 transition-colors">3</div>
                   <div className="relative z-10">
-                    <span className="text-3xl font-black text-amber-600 block mb-1">{topPerformers[2][topMode]}</span>
-                    <span className="text-sm text-zinc-500 uppercase font-bold tracking-wider block mb-4">{topMode}</span>
-                    <h3 className="text-xl font-bold">{topPerformers[2].name}</h3>
-                    <p className="text-zinc-400">{getTeam(topPerformers[2].teamId)?.name}</p>
+                    <span className="text-3xl font-black text-zinc-400 block mb-1">{topPerformers[2][topMode]}</span>
+                    <span className="text-sm text-zinc-500 uppercase font-bold tracking-widest block mb-4">{topMode}</span>
+                    <h3 className="text-lg font-bold uppercase tracking-wide">{topPerformers[2].name}</h3>
+                    <p className="text-zinc-500 font-medium text-sm">{getTeam(topPerformers[2].teamId)?.name}</p>
                   </div>
                 </div>
               </Link>

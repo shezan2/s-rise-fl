@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Anton } from "next/font/google";
 import Navbar from "@/components/Navbar";
+import SmoothScroll from "@/components/SmoothScroll";
 import "./globals.css";
 
 const inter = Inter({
@@ -30,11 +31,13 @@ export default function RootLayout({
       className={`${inter.variable} ${anton.variable} h-full antialiased text-white`}
     >
       <body className="min-h-full flex flex-col font-sans bg-[url('/theme-bg.jpg')] bg-cover bg-center bg-fixed">
-        <Navbar />
-        <main className="flex-grow">{children}</main>
-        <footer className="bg-black/80 backdrop-blur-md border-t border-white/10 py-6 text-center text-gray-500 text-sm">
-          &copy; {new Date().getFullYear()} S-RISE FL. All rights reserved.
-        </footer>
+        <SmoothScroll>
+          <Navbar />
+          <main className="flex-grow flex flex-col">{children}</main>
+          <footer className="bg-black/80 backdrop-blur-md border-t border-white/10 py-6 text-center text-gray-500 text-sm">
+            &copy; {new Date().getFullYear()} S-RISE FL. All rights reserved.
+          </footer>
+        </SmoothScroll>
       </body>
     </html>
   );

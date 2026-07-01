@@ -50,7 +50,7 @@ export default function Home() {
           className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center text-center"
           initial="hidden" animate="show" variants={staggerContainer}
         >
-          <motion.div variants={fadeUp} className="w-40 h-40 md:w-56 md:h-56 mb-8 relative drop-shadow-[0_0_40px_rgba(220,38,38,0.4)]">
+          <motion.div variants={fadeUp} className="w-40 h-40 md:w-56 md:h-56 mb-8 relative">
             <img src="/logo.png" alt="S-Rise FL Logo" className="w-full h-full object-contain" />
           </motion.div>
           
@@ -61,25 +61,9 @@ export default function Home() {
             </span>
           </motion.h1>
           
-          <motion.p variants={fadeUp} className="max-w-2xl text-lg md:text-xl text-neutral-400 mb-10 font-medium px-4">
-            The pinnacle of domestic football. Experience the drama, passion, and unparalleled glory of the S-Rise Football League.
+          <motion.p variants={fadeUp} className="font-sans text-lg md:text-xl text-zinc-400 font-bold uppercase tracking-[0.2em] px-4 mt-2">
+            Drama. Passion. Glory.
           </motion.p>
-          
-          <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto px-4">
-            <Link
-              href="/matches"
-              className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-base font-bold text-black uppercase tracking-wider bg-yellow-500 hover:bg-yellow-400 transition-colors rounded-none"
-            >
-              Explore Fixtures
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Link>
-            <Link
-              href="/bracket"
-              className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white uppercase tracking-wider border-2 border-white/20 hover:border-white hover:bg-white/5 transition-colors rounded-none"
-            >
-              View Bracket
-            </Link>
-          </motion.div>
         </motion.div>
       </section>
 
@@ -135,10 +119,9 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
               >
-                <Link href="/teams" className="block h-full group relative overflow-hidden bg-neutral-900 border border-white/10 p-6 rounded-xl transition-all hover:border-white/30 hover:-translate-y-1">
-                  <div className="absolute top-0 right-0 w-32 h-32 opacity-10 transform translate-x-8 -translate-y-8 group-hover:scale-110 transition-transform duration-500" style={{ backgroundColor: team.accentColor, filter: 'blur(40px)' }} />
+                <Link href="/teams" className="block h-full group relative overflow-hidden bg-neutral-900/50 backdrop-blur-sm border-[0.5px] border-white/10 p-6 rounded-xl transition-all hover:border-white/30 hover:-translate-y-1">
                   <div className="relative z-10 flex flex-col items-center text-center">
-                    <TeamBadge initials={team.badgeInitials} accentColor={team.accentColor} className="w-20 h-20 text-3xl mb-4 shadow-xl" />
+                    <TeamBadge initials={team.badgeInitials} accentColor={team.accentColor} className="w-20 h-20 text-3xl mb-4" />
                     <h3 className="font-anton text-2xl mb-1">{team.name}</h3>
                     <p className="text-sm text-neutral-400">{team.stadiumName}</p>
                   </div>

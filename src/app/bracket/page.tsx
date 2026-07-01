@@ -59,11 +59,11 @@ export default function BracketPage() {
             className="hidden lg:block absolute inset-0 pointer-events-none"
           >
             {/* Top Semi to Final Line */}
-            <div className="absolute top-[20%] left-[calc(50%-6rem)] w-[6rem] h-[30%] border-t-2 border-r-2 border-white/20 rounded-tr-xl" />
+            <div className="absolute top-[20%] left-[calc(50%-6rem)] w-[6rem] h-[30%] border-t-[0.5px] border-r-[0.5px] border-white/20 rounded-tr-xl" />
             {/* Bottom Semi to Final Line */}
-            <div className="absolute bottom-[20%] left-[calc(50%-6rem)] w-[6rem] h-[30%] border-b-2 border-r-2 border-white/20 rounded-br-xl" />
+            <div className="absolute bottom-[20%] left-[calc(50%-6rem)] w-[6rem] h-[30%] border-b-[0.5px] border-r-[0.5px] border-white/20 rounded-br-xl" />
             {/* Connector into Final */}
-            <div className="absolute top-[50%] left-[50%] w-[4rem] h-[2px] bg-white/20" />
+            <div className="absolute top-[50%] left-[50%] w-[4rem] h-[0.5px] bg-white/20" />
           </motion.div>
 
           {/* Semifinals Column */}
@@ -76,11 +76,10 @@ export default function BracketPage() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: idx * 0.2 }}
               >
-                <div className="absolute -top-4 -left-4 w-12 h-12 bg-red-600/20 blur-xl rounded-full group-hover:bg-red-600/40 transition-colors" />
-                <h3 className="text-red-500 font-anton tracking-wider uppercase mb-3 text-lg md:text-xl relative">
+                <h3 className="text-zinc-500 font-anton tracking-widest uppercase mb-3 text-lg md:text-xl relative">
                   {match.stage}
                 </h3>
-                <div className="bg-black/60 backdrop-blur-md border border-white/10 rounded-xl overflow-hidden shadow-2xl relative transition-transform duration-300 hover:scale-105">
+                <div className="bg-black/40 backdrop-blur-md border-[0.5px] border-white/10 rounded-xl overflow-hidden relative transition-transform duration-300 hover:border-white/30">
                   <MatchRow match={formatMatch(match)} />
                 </div>
               </motion.div>
@@ -96,11 +95,10 @@ export default function BracketPage() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
               >
-                <div className="absolute inset-0 bg-yellow-500/20 blur-2xl rounded-full group-hover:bg-yellow-500/40 transition-colors" />
-                <div className="absolute -top-8 md:-top-12 left-1/2 -translate-x-1/2 bg-yellow-500 text-black px-6 py-2 rounded-t-xl font-bold uppercase tracking-widest text-xs md:text-sm shadow-[0_0_20px_rgba(234,179,8,0.3)]">
+                <div className="absolute -top-8 md:-top-12 left-1/2 -translate-x-1/2 bg-white text-black px-6 py-2 rounded-t-xl font-bold uppercase tracking-widest text-xs md:text-sm">
                   The Final
                 </div>
-                <div className="bg-black/80 backdrop-blur-md border-2 border-yellow-500/50 rounded-xl overflow-hidden shadow-[0_0_40px_rgba(234,179,8,0.15)] relative transition-transform duration-300 hover:scale-105 z-20">
+                <div className="bg-black/60 backdrop-blur-md border-[0.5px] border-white/20 rounded-xl overflow-hidden relative transition-transform duration-300 hover:border-white/40 z-20">
                   <MatchRow match={formatMatch(final)} />
                 </div>
               </motion.div>
@@ -113,10 +111,10 @@ export default function BracketPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.8 }}
               >
-                <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-neutral-800 text-white px-6 py-1 rounded-t-xl font-bold uppercase tracking-widest text-[10px] md:text-xs border border-b-0 border-white/10">
+                <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-neutral-800 text-white px-6 py-1 rounded-t-xl font-bold uppercase tracking-widest text-[10px] md:text-xs border-[0.5px] border-b-0 border-white/10">
                   3rd Place
                 </div>
-                <div className="bg-black/60 backdrop-blur-md border border-white/10 rounded-xl overflow-hidden shadow-xl relative transition-transform duration-300 hover:scale-105">
+                <div className="bg-black/40 backdrop-blur-md border-[0.5px] border-white/10 rounded-xl overflow-hidden relative transition-transform duration-300 hover:border-white/30">
                   <MatchRow match={formatMatch(thirdPlace)} />
                 </div>
               </motion.div>

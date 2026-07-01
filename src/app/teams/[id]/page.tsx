@@ -36,7 +36,7 @@ export default async function TeamPage({ params }: { params: Promise<{ id: strin
           </Link>
 
           <div className="flex flex-col md:flex-row items-start md:items-center gap-8">
-            <div className="p-4 bg-black/50 backdrop-blur-xl rounded-2xl border border-white/10">
+            <div className="p-4 bg-black/30 backdrop-blur-md rounded-2xl border-[0.5px] border-white/10">
               <TeamBadge initials={team.badgeInitials} accentColor={team.accentColor} size="lg" />
             </div>
             <div className="flex-1">
@@ -56,7 +56,7 @@ export default async function TeamPage({ params }: { params: Promise<{ id: strin
           First Team Squad
         </h2>
 
-        <div className="overflow-x-auto rounded-xl border border-white/10 bg-black/50">
+        <div className="overflow-x-auto rounded-xl border-[0.5px] border-white/10 bg-black/30 backdrop-blur-md">
           <table className="w-full text-left border-collapse min-w-[800px]">
             <thead>
               <tr className="border-b border-white/10 bg-white/5 text-xs font-bold uppercase tracking-widest text-gray-400">

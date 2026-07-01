@@ -45,13 +45,7 @@ export default async function PlayerPage({
 
         {/* Header Profile */}
         <div className="relative bg-zinc-900 border border-white/10 rounded-3xl p-8 md:p-12 overflow-hidden">
-          {/* Background accent */}
-          {team && (
-            <div 
-              className="absolute top-0 right-0 w-[500px] h-[500px] opacity-10 blur-[100px] rounded-full transform translate-x-1/3 -translate-y-1/3 pointer-events-none"
-              style={{ backgroundColor: team.accentColor }}
-            />
-          )}
+          {/* Removed background accent blob for cleaner aesthetic */}
 
           <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
             <div className="space-y-4">
