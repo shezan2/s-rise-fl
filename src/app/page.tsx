@@ -67,7 +67,11 @@ export default function Home() {
         </motion.div>
       </section>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 w-full space-y-24">
+      <div className="relative w-full">
+        {/* Seamless transition gradient */}
+        <div className="absolute top-0 left-0 w-full h-48 bg-gradient-to-b from-black/90 to-transparent pointer-events-none -mt-1 z-0" />
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 w-full space-y-24 relative z-10">
         {/* Upcoming Fixtures */}
         <motion.div 
           initial={{ opacity: 0, y: 50 }}
@@ -131,6 +135,7 @@ export default function Home() {
           </div>
         </motion.section>
       </div>
+    </div>
     </div>
   );
 }
