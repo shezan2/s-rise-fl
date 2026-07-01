@@ -23,14 +23,19 @@ export interface MatchData {
 interface MatchRowProps {
   match: MatchData;
   className?: string;
+  posterStyle?: boolean;
 }
 
-export default function MatchRow({ match, className }: MatchRowProps) {
+export default function MatchRow({ match, className, posterStyle }: MatchRowProps) {
+  const teamNameClasses = posterStyle 
+    ? "font-anton text-xl md:text-2xl tracking-widest uppercase text-[#eab308] hidden sm:block truncate"
+    : "font-sans font-bold text-lg hidden sm:block truncate";
+
   return (
     <div className={cn("flex items-center justify-between p-4 border-b-[0.5px] border-white/10 bg-black hover:bg-white/5 transition-colors", className)}>
       <div className="flex items-center gap-4 flex-1">
         <TeamBadge initials={match.homeTeam.initials} accentColor={match.homeTeam.accentColor} />
-        <span className="font-sans font-bold text-lg hidden sm:block truncate">{match.homeTeam.name}</span>
+        <span className={teamNameClasses}>{match.homeTeam.name}</span>
       </div>
       
       <div className="flex flex-col items-center justify-center min-w-[120px]">
@@ -56,7 +61,7 @@ export default function MatchRow({ match, className }: MatchRowProps) {
       </div>
 
       <div className="flex items-center gap-4 flex-1 justify-end text-right">
-        <span className="font-sans font-bold text-lg hidden sm:block truncate">{match.awayTeam.name}</span>
+        <span className={teamNameClasses}>{match.awayTeam.name}</span>
         <TeamBadge initials={match.awayTeam.initials} accentColor={match.awayTeam.accentColor} />
       </div>
     </div>
