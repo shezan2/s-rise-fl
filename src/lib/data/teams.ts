@@ -16,7 +16,7 @@ export const teams: Team[] = [
     "city": "Singapore",
     "foundedYear": 2025,
     "badgeInitials": "TEN",
-    "accentColor": "#dc2626",
+    "accentColor": "#e62a2a",
     "stadiumName": "S-Rise Arena"
   },
   {
@@ -25,7 +25,7 @@ export const teams: Team[] = [
     "city": "Singapore",
     "foundedYear": 2025,
     "badgeInitials": "8BA",
-    "accentColor": "#3b82f6",
+    "accentColor": "#cca352",
     "stadiumName": "S-Rise Arena"
   },
   {
@@ -34,7 +34,7 @@ export const teams: Team[] = [
     "city": "Singapore",
     "foundedYear": 2025,
     "badgeInitials": "SOL",
-    "accentColor": "#10b981",
+    "accentColor": "#153e70",
     "stadiumName": "S-Rise Arena"
   },
   {
@@ -43,7 +43,7 @@ export const teams: Team[] = [
     "city": "Singapore",
     "foundedYear": 2025,
     "badgeInitials": "TOE",
-    "accentColor": "#f59e0b",
+    "accentColor": "#5ea980",
     "stadiumName": "S-Rise Arena"
   }
 ];
