@@ -50,18 +50,18 @@ export default function Home() {
           className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center text-center"
           initial="hidden" animate="show" variants={staggerContainer}
         >
-          <motion.div variants={fadeUp} className="w-40 h-40 md:w-56 md:h-56 mb-8 relative">
+          <motion.div variants={fadeUp} className="w-56 h-56 md:w-80 md:h-80 mb-6 relative">
             <img src="/logo.png" alt="S-Rise FL Logo" className="w-full h-full object-contain" />
           </motion.div>
           
-          <motion.h1 variants={fadeUp} className="font-anton text-5xl md:text-8xl tracking-tight uppercase mb-6">
+          <motion.h1 variants={fadeUp} className="font-anton text-4xl md:text-6xl tracking-tight uppercase mb-4">
             <span className="text-white">S-Rise </span>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600">
               FL
             </span>
           </motion.h1>
           
-          <motion.p variants={fadeUp} className="font-sans text-lg md:text-xl text-zinc-400 font-bold uppercase tracking-[0.2em] px-4 mt-2">
+          <motion.p variants={fadeUp} className="font-sans text-sm md:text-base text-zinc-400 font-bold uppercase tracking-[0.3em] px-4 mt-2">
             Drama. Passion. Glory.
           </motion.p>
         </motion.div>
