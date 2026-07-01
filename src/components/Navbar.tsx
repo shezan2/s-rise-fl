@@ -11,7 +11,6 @@ const NAV_LINKS = [
   { name: "Matches", href: "/matches" },
   { name: "Teams", href: "/teams" },
   { name: "Stats", href: "/stats" },
-  { name: "News", href: "/news" },
 ];
 
 export default function Navbar() {
