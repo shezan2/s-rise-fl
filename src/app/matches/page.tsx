@@ -21,6 +21,10 @@ export default function MatchesPage() {
   const filteredMatches = matches.filter(m => {
     if (activeTab !== 'all' && m.status !== activeTab) return false;
     if (selectedTeamId && m.homeTeamId !== selectedTeamId && m.awayTeamId !== selectedTeamId) return false;
+    
+    const isUnconfirmed = m.stage === "S-Rise Final" || m.stage === "3rd Place";
+    if (isUnconfirmed) return false;
+    
     return true;
   });
 
