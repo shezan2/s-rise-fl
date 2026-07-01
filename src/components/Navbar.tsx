@@ -23,7 +23,6 @@ export default function Navbar() {
         <div className="flex justify-between h-20">
           <div className="flex items-center gap-4">
             <Link href="/" className="flex items-center gap-3">
-              <img src="/crest-logo.png" alt="S-Rise FL Logo" className="w-10 h-10 object-contain" />
               <span className="font-anton text-2xl text-white tracking-widest uppercase">
                 S-Rise <span className="text-yellow-500">FL</span>
               </span>
