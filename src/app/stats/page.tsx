@@ -53,7 +53,7 @@ export default function StatsPage() {
         {/* Header */}
         <div className="flex flex-col items-center justify-center text-center gap-4 border-b border-white/10 pb-6">
           <div>
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tighter uppercase">League Stats</h1>
+            <h1 className="font-anton text-4xl md:text-6xl uppercase tracking-wider text-white">League Stats</h1>
             <p className="text-zinc-400 mt-2 text-lg">Comprehensive player performance data</p>
           </div>
         </div>
