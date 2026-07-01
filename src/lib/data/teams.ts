@@ -7,6 +7,7 @@ export interface Team {
   badgeInitials: string;
   accentColor: string;
   stadiumName: string;
+  logoUrl?: string;
 }
 
 export const teams: Team[] = [
@@ -17,7 +18,8 @@ export const teams: Team[] = [
     "foundedYear": 2025,
     "badgeInitials": "TEN",
     "accentColor": "#e62a2a",
-    "stadiumName": "S-Rise Arena"
+    "stadiumName": "S-Rise Arena",
+    "logoUrl": "/logos/tenkuzo.png"
   },
   {
     "id": "team_2",
@@ -26,7 +28,8 @@ export const teams: Team[] = [
     "foundedYear": 2025,
     "badgeInitials": "8BA",
     "accentColor": "#cca352",
-    "stadiumName": "S-Rise Arena"
+    "stadiumName": "S-Rise Arena",
+    "logoUrl": "/logos/8ball.png"
   },
   {
     "id": "team_3",
@@ -35,7 +38,8 @@ export const teams: Team[] = [
     "foundedYear": 2025,
     "badgeInitials": "SOL",
     "accentColor": "#153e70",
-    "stadiumName": "S-Rise Arena"
+    "stadiumName": "S-Rise Arena",
+    "logoUrl": "/logos/solace.png"
   },
   {
     "id": "team_4",
@@ -44,6 +48,7 @@ export const teams: Team[] = [
     "foundedYear": 2025,
     "badgeInitials": "TOE",
     "accentColor": "#5ea980",
-    "stadiumName": "S-Rise Arena"
+    "stadiumName": "S-Rise Arena",
+    "logoUrl": "/logos/toezilla.png"
   }
 ];

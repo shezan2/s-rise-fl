@@ -11,8 +11,8 @@ export type MatchState = 'upcoming' | 'live' | 'completed';
 
 export interface MatchData {
   id: string;
-  homeTeam: { name: string; initials: string; accentColor?: string };
-  awayTeam: { name: string; initials: string; accentColor?: string };
+  homeTeam: { id?: string; name: string; initials: string; accentColor?: string };
+  awayTeam: { id?: string; name: string; initials: string; accentColor?: string };
   homeScore?: number;
   awayScore?: number;
   time: string;
@@ -35,7 +35,7 @@ export default function MatchRow({ match, className, posterStyle }: MatchRowProp
     <div className={cn("flex items-center justify-between p-4 border-b-[0.5px] border-white/10 bg-black hover:bg-white/5 transition-colors", className)}>
       <div className="flex items-center gap-2 sm:gap-4 flex-1 min-w-0">
         <div className="shrink-0">
-          <TeamBadge initials={match.homeTeam.initials} accentColor={match.homeTeam.accentColor} />
+          <TeamBadge teamId={match.homeTeam.id} initials={match.homeTeam.initials} accentColor={match.homeTeam.accentColor} />
         </div>
         <span className={teamNameClasses}>{match.homeTeam.name}</span>
       </div>
@@ -65,7 +65,7 @@ export default function MatchRow({ match, className, posterStyle }: MatchRowProp
       <div className="flex items-center gap-2 sm:gap-4 flex-1 justify-end text-right min-w-0">
         <span className={teamNameClasses}>{match.awayTeam.name}</span>
         <div className="shrink-0">
-          <TeamBadge initials={match.awayTeam.initials} accentColor={match.awayTeam.accentColor} />
+          <TeamBadge teamId={match.awayTeam.id} initials={match.awayTeam.initials} accentColor={match.awayTeam.accentColor} />
         </div>
       </div>
     </div>

@@ -17,8 +17,8 @@ export default function Home() {
       const awayTeam = teams.find((t) => t.id === m.awayTeamId)!;
       return {
         id: m.id,
-        homeTeam: { name: homeTeam.name, initials: homeTeam.badgeInitials, accentColor: homeTeam.accentColor },
-        awayTeam: { name: awayTeam.name, initials: awayTeam.badgeInitials, accentColor: awayTeam.accentColor },
+        homeTeam: homeTeam ? { id: homeTeam.id, name: homeTeam.name, initials: homeTeam.badgeInitials, accentColor: homeTeam.accentColor } : { id: "", name: "TBD", initials: "?", accentColor: "#333" },
+        awayTeam: awayTeam ? { id: awayTeam.id, name: awayTeam.name, initials: awayTeam.badgeInitials, accentColor: awayTeam.accentColor } : { id: "", name: "TBD", initials: "?", accentColor: "#333" },
         time: m.time,
         state: "upcoming",
       };
@@ -123,7 +123,7 @@ export default function Home() {
               >
                 <Link href="/teams" className="block h-full group relative overflow-hidden bg-neutral-900/50 backdrop-blur-sm border-[0.5px] border-white/10 p-6 rounded-xl transition-all hover:border-white/30 hover:-translate-y-1">
                   <div className="relative z-10 flex flex-col items-center text-center">
-                    <TeamBadge initials={team.badgeInitials} accentColor={team.accentColor} size="lg" className="mb-4" />
+                    <TeamBadge teamId={team.id} initials={team.badgeInitials} accentColor={team.accentColor} size="lg" className="mb-4" />
                     <h3 className="font-anton text-2xl mb-1">{team.name}</h3>
                   </div>
                 </Link>

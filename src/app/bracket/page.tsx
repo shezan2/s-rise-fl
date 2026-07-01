@@ -15,8 +15,8 @@ function formatMatch(m: any): MatchData {
   
   return {
     id: m.id,
-    homeTeam: homeTeam && !isUnconfirmed ? { name: homeTeam.name, initials: homeTeam.badgeInitials, accentColor: homeTeam.accentColor } : { name: "TBD", initials: "?", accentColor: "#333" },
-    awayTeam: awayTeam && !isUnconfirmed ? { name: awayTeam.name, initials: awayTeam.badgeInitials, accentColor: awayTeam.accentColor } : { name: "TBD", initials: "?", accentColor: "#333" },
+    homeTeam: homeTeam && !isUnconfirmed ? { id: homeTeam.id, name: homeTeam.name, initials: homeTeam.badgeInitials, accentColor: homeTeam.accentColor } : { name: "TBD", initials: "?", accentColor: "#333" },
+    awayTeam: awayTeam && !isUnconfirmed ? { id: awayTeam.id, name: awayTeam.name, initials: awayTeam.badgeInitials, accentColor: awayTeam.accentColor } : { name: "TBD", initials: "?", accentColor: "#333" },
     homeScore: isUnconfirmed ? undefined : m.homeScore,
     awayScore: isUnconfirmed ? undefined : m.awayScore,
     time: m.time,

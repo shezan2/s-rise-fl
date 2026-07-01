@@ -114,8 +114,8 @@ export default function MatchesPage() {
                     <MatchRow 
                       match={{
                         id: match.id,
-                        homeTeam: { name: homeTeam.name, initials: homeTeam.badgeInitials, accentColor: homeTeam.accentColor },
-                        awayTeam: { name: awayTeam.name, initials: awayTeam.badgeInitials, accentColor: awayTeam.accentColor },
+                        homeTeam: { id: homeTeam.id, name: homeTeam.name, initials: homeTeam.badgeInitials, accentColor: homeTeam.accentColor },
+                        awayTeam: { id: awayTeam.id, name: awayTeam.name, initials: awayTeam.badgeInitials, accentColor: awayTeam.accentColor },
                         homeScore: match.homeScore,
                         awayScore: match.awayScore,
                         time: match.time,

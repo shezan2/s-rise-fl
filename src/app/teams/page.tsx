@@ -30,7 +30,7 @@ export default function TeamsPage() {
               />
 
               <div className="relative z-10 flex flex-col items-center text-center space-y-4">
-                <TeamBadge initials={team.badgeInitials} accentColor={team.accentColor} size="lg" />
+                <TeamBadge teamId={team.id} initials={team.badgeInitials} accentColor={team.accentColor} size="lg" />
                 <div className="text-center mt-6 relative z-10 flex flex-col items-center flex-1">
                   <h2 className="font-anton text-2xl mb-1 tracking-wider">{team.name}</h2>
                 </div>
