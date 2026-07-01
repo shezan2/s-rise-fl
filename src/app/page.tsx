@@ -51,7 +51,7 @@ export default function Home() {
           initial="hidden" animate="show" variants={staggerContainer}
         >
           <motion.div variants={fadeUp} className="w-56 h-56 md:w-80 md:h-80 mb-6 relative">
-            <img src="/logo.png" alt="S-Rise FL Logo" className="w-full h-full object-contain" />
+            <img src="/crest-logo.png" alt="S-Rise FL Logo" className="w-full h-full object-contain" />
           </motion.div>
           
           <motion.h1 variants={fadeUp} className="font-anton text-4xl md:text-6xl tracking-tight uppercase mb-4">
