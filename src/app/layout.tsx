@@ -30,7 +30,10 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${anton.variable} h-full antialiased text-white`}
     >
-      <body className="min-h-full flex flex-col font-sans bg-[url('/theme-bg.jpg')] bg-cover bg-center bg-fixed">
+      <body className="min-h-full flex flex-col font-sans bg-black">
+        <div className="fixed inset-0 -z-10 w-full h-full">
+          <img src="/theme-bg.jpg" alt="" className="w-full h-full object-cover opacity-50" />
+        </div>
         <SmoothScroll>
           <Navbar />
           <main className="flex-grow flex flex-col">{children}</main>
