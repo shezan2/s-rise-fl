@@ -54,14 +54,14 @@ export default function Home() {
             <img src="/crest-logo.png" alt="S-Rise FL Logo" className="w-full h-full object-contain" />
           </motion.div>
           
-          <motion.h1 variants={fadeUp} className="font-anton text-4xl md:text-6xl tracking-tight uppercase mb-4">
+          <motion.h1 variants={fadeUp} className="font-anton text-6xl md:text-8xl tracking-tight uppercase mb-4">
             <span className="text-white">S-Rise </span>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600">
               FL
             </span>
           </motion.h1>
           
-          <motion.p variants={fadeUp} className="font-sans text-sm md:text-base text-zinc-400 font-bold uppercase tracking-[0.3em] px-4 mt-2">
+          <motion.p variants={fadeUp} className="font-sans text-lg md:text-2xl text-zinc-400 font-bold uppercase tracking-[0.3em] px-4 mt-2">
             Drama. Passion. Glory.
           </motion.p>
         </motion.div>
