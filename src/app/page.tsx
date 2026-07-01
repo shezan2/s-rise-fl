@@ -96,7 +96,7 @@ export default function Home() {
                 </motion.div>
               ))}
             </div>
-            <Link href="/matches" className="self-end mt-6 text-xs md:text-sm text-red-500 hover:text-red-400 font-bold uppercase tracking-wider">
+            <Link href="/matches" className="self-end mt-6 text-[9px] md:text-[10px] text-red-500 hover:text-red-400 font-bold uppercase tracking-wider">
               All Matches →
             </Link>
           </section>
