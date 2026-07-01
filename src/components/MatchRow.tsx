@@ -28,13 +28,15 @@ interface MatchRowProps {
 
 export default function MatchRow({ match, className, posterStyle }: MatchRowProps) {
   const teamNameClasses = posterStyle 
-    ? "font-anton text-xl md:text-2xl tracking-widest uppercase text-[#eab308] hidden sm:block truncate"
-    : "font-sans font-bold text-lg hidden sm:block truncate";
+    ? "font-anton text-xs sm:text-sm md:text-xl tracking-widest uppercase text-[#eab308] truncate"
+    : "font-sans font-bold text-[10px] sm:text-xs md:text-lg truncate";
 
   return (
     <div className={cn("flex items-center justify-between p-4 border-b-[0.5px] border-white/10 bg-black hover:bg-white/5 transition-colors", className)}>
-      <div className="flex items-center gap-4 flex-1">
-        <TeamBadge initials={match.homeTeam.initials} accentColor={match.homeTeam.accentColor} />
+      <div className="flex items-center gap-2 sm:gap-4 flex-1 min-w-0">
+        <div className="shrink-0">
+          <TeamBadge initials={match.homeTeam.initials} accentColor={match.homeTeam.accentColor} />
+        </div>
         <span className={teamNameClasses}>{match.homeTeam.name}</span>
       </div>
       
@@ -60,9 +62,11 @@ export default function MatchRow({ match, className, posterStyle }: MatchRowProp
         )}
       </div>
 
-      <div className="flex items-center gap-4 flex-1 justify-end text-right">
+      <div className="flex items-center gap-2 sm:gap-4 flex-1 justify-end text-right min-w-0">
         <span className={teamNameClasses}>{match.awayTeam.name}</span>
-        <TeamBadge initials={match.awayTeam.initials} accentColor={match.awayTeam.accentColor} />
+        <div className="shrink-0">
+          <TeamBadge initials={match.awayTeam.initials} accentColor={match.awayTeam.accentColor} />
+        </div>
       </div>
     </div>
   );
