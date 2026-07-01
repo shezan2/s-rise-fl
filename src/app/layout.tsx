@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Anton } from "next/font/google";
 import TabBar from "@/components/TabBar";
 import SmoothScroll from "@/components/SmoothScroll";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const inter = Inter({
@@ -41,6 +42,7 @@ export default function RootLayout({
           </footer>
           <TabBar />
         </SmoothScroll>
+        <Analytics />
       </body>
     </html>
   );
