@@ -47,13 +47,13 @@ export default function StatsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white p-6 md:p-12 font-sans">
-      <div className="max-w-6xl mx-auto space-y-16">
+    <div className="min-h-screen bg-transparent text-white p-6 md:p-12 font-sans">
+      <div className="max-w-6xl mx-auto space-y-16 relative z-10">
         
         {/* Header */}
-        <div className="flex flex-col md:flex-row justify-between items-end gap-6 border-b border-white/10 pb-6">
+        <div className="flex flex-col items-center justify-center text-center gap-4 border-b border-white/10 pb-6">
           <div>
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tighter uppercase">League Stats</h1>
+            <h1 className="text-4xl md:text-6xl font-bold tracking-tighter uppercase">League Stats</h1>
             <p className="text-zinc-400 mt-2 text-lg">Comprehensive player performance data</p>
           </div>
         </div>

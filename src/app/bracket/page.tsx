@@ -11,14 +11,16 @@ function formatMatch(m: any): MatchData {
   const homeTeam = teams.find((t) => t.id === m.homeTeamId);
   const awayTeam = teams.find((t) => t.id === m.awayTeamId);
   
+  const isUnconfirmed = m.stage === "S-Rise Final" || m.stage === "3rd Place";
+  
   return {
     id: m.id,
-    homeTeam: homeTeam ? { name: homeTeam.name, initials: homeTeam.badgeInitials, accentColor: homeTeam.accentColor } : { name: "TBD", initials: "?", accentColor: "#666" },
-    awayTeam: awayTeam ? { name: awayTeam.name, initials: awayTeam.badgeInitials, accentColor: awayTeam.accentColor } : { name: "TBD", initials: "?", accentColor: "#666" },
-    homeScore: m.homeScore,
-    awayScore: m.awayScore,
+    homeTeam: homeTeam && !isUnconfirmed ? { name: homeTeam.name, initials: homeTeam.badgeInitials, accentColor: homeTeam.accentColor } : { name: "TBD", initials: "?", accentColor: "#333" },
+    awayTeam: awayTeam && !isUnconfirmed ? { name: awayTeam.name, initials: awayTeam.badgeInitials, accentColor: awayTeam.accentColor } : { name: "TBD", initials: "?", accentColor: "#333" },
+    homeScore: isUnconfirmed ? undefined : m.homeScore,
+    awayScore: isUnconfirmed ? undefined : m.awayScore,
     time: m.time,
-    state: m.status,
+    state: isUnconfirmed ? "upcoming" : m.status,
     stage: m.stage,
   };
 }
@@ -40,7 +42,6 @@ export default function BracketPage() {
           className="mb-12 md:mb-16 text-center"
         >
           <h1 className="font-anton text-4xl md:text-6xl text-white uppercase tracking-wider flex items-center justify-center gap-2 md:gap-4 mb-4">
-            <Trophy className="w-8 h-8 md:w-12 md:h-12 text-yellow-500" />
             Tournament Bracket
           </h1>
           <p className="text-neutral-400 text-sm md:text-lg">

@@ -7,10 +7,10 @@ export default function TeamsPage() {
   const sortedTeams = [...teams];
 
   return (
-    <div className="min-h-screen bg-neutral-950 text-white p-6 md:p-12 font-sans">
-      <div className="max-w-6xl mx-auto space-y-12">
-        <header className="space-y-4">
-          <h1 className="font-anton text-5xl md:text-7xl uppercase tracking-wider text-white">
+    <div className="min-h-screen bg-transparent text-white p-6 md:p-12 font-sans">
+      <div className="max-w-6xl mx-auto space-y-12 relative z-10">
+        <header className="space-y-4 text-center">
+          <h1 className="font-anton text-4xl md:text-6xl uppercase tracking-wider text-white">
             Clubs
           </h1>
           <p className="text-gray-400 text-lg">The 4 founding clubs of the S-RISE FL.</p>

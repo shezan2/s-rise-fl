@@ -29,10 +29,10 @@ export default function MatchesPage() {
   };
 
   return (
-    <div className="min-h-screen bg-neutral-950 text-white p-6 md:p-12 font-sans">
-      <div className="max-w-4xl mx-auto space-y-8">
-        <header className="space-y-4">
-          <h1 className="font-anton text-5xl md:text-7xl uppercase tracking-wider text-white">
+    <div className="min-h-screen bg-transparent text-white p-6 md:p-12 font-sans">
+      <div className="max-w-4xl mx-auto space-y-8 relative z-10">
+        <header className="space-y-4 text-center">
+          <h1 className="font-anton text-4xl md:text-6xl uppercase tracking-wider text-white">
             Matches
           </h1>
           <p className="text-gray-400 text-lg">Results and fixtures for the S-RISE FL.</p>
