@@ -29,7 +29,7 @@ export default function StatsPage() {
       if (aVal < bVal) return sortOrder === "asc" ? -1 : 1;
       if (aVal > bVal) return sortOrder === "asc" ? 1 : -1;
       return 0;
-    });
+    }).slice(0, 10);
   }, [sortField, sortOrder]);
 
   const handleSort = (field: SortField) => {
