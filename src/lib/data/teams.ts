@@ -1,8 +1,9 @@
+// Auto-generated from Excel
 export interface Team {
   id: string;
   name: string;
   city: string;
-  founded: number;
+  foundedYear: number;
   badgeInitials: string;
   accentColor: string;
   stadiumName: string;
@@ -10,39 +11,39 @@ export interface Team {
 
 export const teams: Team[] = [
   {
-    id: "t1",
-    name: "Metro United",
-    city: "Metropolis",
-    founded: 1995,
-    badgeInitials: "MU",
-    accentColor: "#e11d48",
-    stadiumName: "Metro Arena"
+    "id": "team_1",
+    "name": "Tenkuzo",
+    "city": "Singapore",
+    "foundedYear": 2025,
+    "badgeInitials": "TEN",
+    "accentColor": "#dc2626",
+    "stadiumName": "S-Rise Arena"
   },
   {
-    id: "t2",
-    name: "Capital City FC",
-    city: "Capital City",
-    founded: 1982,
-    badgeInitials: "CC",
-    accentColor: "#2563eb",
-    stadiumName: "The Capital Bowl"
+    "id": "team_2",
+    "name": "8Ball",
+    "city": "Singapore",
+    "foundedYear": 2025,
+    "badgeInitials": "8BA",
+    "accentColor": "#3b82f6",
+    "stadiumName": "S-Rise Arena"
   },
   {
-    id: "t3",
-    name: "Harbor Rovers",
-    city: "Harbor Bay",
-    founded: 2005,
-    badgeInitials: "HR",
-    accentColor: "#16a34a",
-    stadiumName: "Bayview Park"
+    "id": "team_3",
+    "name": "Solace FC",
+    "city": "Singapore",
+    "foundedYear": 2025,
+    "badgeInitials": "SOL",
+    "accentColor": "#10b981",
+    "stadiumName": "S-Rise Arena"
   },
   {
-    id: "t4",
-    name: "Northside Athletic",
-    city: "Northside",
-    founded: 1992,
-    badgeInitials: "NA",
-    accentColor: "#d97706",
-    stadiumName: "Athletic Grounds"
+    "id": "team_4",
+    "name": "Toezilla FC",
+    "city": "Singapore",
+    "foundedYear": 2025,
+    "badgeInitials": "TOE",
+    "accentColor": "#f59e0b",
+    "stadiumName": "S-Rise Arena"
   }
 ];

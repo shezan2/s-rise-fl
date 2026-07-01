@@ -41,7 +41,7 @@ export default async function TeamPage({ params }: { params: Promise<{ id: strin
             </div>
             <div className="flex-1">
               <h1 className="font-anton text-5xl md:text-7xl uppercase tracking-wider mb-2">{team.name}</h1>
-              <p className="text-xl text-gray-400 font-medium">{team.city} • Est. {team.founded}</p>
+              <p className="text-xl text-neutral-400 font-medium">{team.city} • Est. {team.foundedYear}</p>
               <p className="text-gray-500 mt-1">{team.stadiumName}</p>
             </div>
 
