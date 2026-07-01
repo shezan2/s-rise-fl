@@ -50,7 +50,6 @@ export default async function PlayerPage({
           <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
             <div className="space-y-4">
               <div className="flex flex-wrap items-center gap-4 text-sm font-bold uppercase tracking-widest text-zinc-400">
-                <span className="flex items-center gap-1.5"><Flag className="w-4 h-4" /> {player.nationality}</span>
                 <span className="flex items-center gap-1.5"><Activity className="w-4 h-4" /> {player.position}</span>
                 {team && (
                   <span className="flex items-center gap-1.5" style={{ color: team.accentColor }}>

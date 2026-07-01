@@ -62,7 +62,6 @@ export default async function TeamPage({ params }: { params: Promise<{ id: strin
               <tr className="border-b border-white/10 bg-white/5 text-xs font-bold uppercase tracking-widest text-gray-400">
                 <th className="p-4">Player</th>
                 <th className="p-4 text-center">Pos</th>
-                <th className="p-4 text-center">Nat</th>
                 <th className="p-4 text-right">Apps</th>
                 <th className="p-4 text-right">Goals</th>
                 <th className="p-4 text-right">Assists</th>
@@ -82,7 +81,6 @@ export default async function TeamPage({ params }: { params: Promise<{ id: strin
                       {player.position}
                     </span>
                   </td>
-                  <td className="p-4 text-center text-gray-400 font-medium">{player.nationality}</td>
                   <td className="p-4 text-right font-medium">{player.apps}</td>
                   <td className="p-4 text-right font-medium text-white">{player.goals}</td>
                   <td className="p-4 text-right font-medium text-gray-300">{player.assists}</td>
