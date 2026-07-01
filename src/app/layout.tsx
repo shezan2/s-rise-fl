@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Anton } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import Navbar from "@/components/Navbar";
 import SmoothScroll from "@/components/SmoothScroll";
 import "./globals.css";
@@ -38,6 +39,7 @@ export default function RootLayout({
             &copy; {new Date().getFullYear()} S-RISE FL. All rights reserved.
           </footer>
         </SmoothScroll>
+        <Analytics />
       </body>
     </html>
   );
