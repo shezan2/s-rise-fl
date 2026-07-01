@@ -61,8 +61,7 @@ export default function StatsPage() {
         {/* Top Performers Section */}
         <section>
           <div className="flex items-center justify-between mb-8">
-            <h2 className="text-3xl font-bold uppercase tracking-tight flex items-center gap-3">
-              <Trophy className="text-amber-500 w-8 h-8" />
+            <h2 className="text-3xl font-bold uppercase tracking-tight">
               Top Performers
             </h2>
             <div className="flex bg-zinc-900 rounded-full p-1 border border-white/10">
