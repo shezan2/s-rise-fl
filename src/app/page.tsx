@@ -80,27 +80,25 @@ export default function Home() {
           transition={{ duration: 0.8 }}
           className="flex flex-col gap-12"
         >
-          <section>
-            <div className="flex items-center justify-between mb-6">
-              <h2 className="font-anton text-2xl md:text-3xl text-white uppercase tracking-wider flex items-center gap-3">
-                <CalendarDays className="w-6 h-6 md:w-8 md:h-8 text-red-500" />
-                Next Fixtures
-              </h2>
-              <Link href="/matches" className="text-xs md:text-sm text-red-500 hover:text-red-400 font-bold uppercase tracking-wider">
-                All Matches →
-              </Link>
-            </div>
-            <div className="flex flex-col gap-4">
+          <section className="flex flex-col items-center">
+            <h2 className="font-anton text-2xl md:text-3xl text-white uppercase tracking-wider flex items-center gap-3 mb-6">
+              <CalendarDays className="w-6 h-6 md:w-8 md:h-8 text-red-500" />
+              Next Fixtures
+            </h2>
+            <div className="flex flex-col gap-4 w-full">
               {upcomingMatches.map((match) => (
                 <motion.div 
                   whileHover={{ scale: 1.02 }}
                   key={match.id} 
-                  className="border border-white/10 rounded-xl overflow-hidden"
+                  className="border border-white/10 rounded-xl overflow-hidden w-full"
                 >
                   <MatchRow match={match} />
                 </motion.div>
               ))}
             </div>
+            <Link href="/matches" className="mt-8 text-xs md:text-sm text-red-500 hover:text-red-400 font-bold uppercase tracking-wider">
+              All Matches →
+            </Link>
           </section>
         </motion.div>
 
