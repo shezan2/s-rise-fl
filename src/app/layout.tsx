@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Anton } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import TabBar from "@/components/TabBar";
 import SmoothScroll from "@/components/SmoothScroll";
 import "./globals.css";
@@ -41,6 +42,7 @@ export default function RootLayout({
           </footer>
           <TabBar />
         </SmoothScroll>
+        <SpeedInsights />
       </body>
     </html>
   );
