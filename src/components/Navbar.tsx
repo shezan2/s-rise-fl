@@ -28,8 +28,8 @@ export default function Navbar() {
               </span>
             </Link>
           </div>
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+          <div className="hidden md:flex items-center">
+            <div className="ml-10 flex items-center space-x-8">
               {NAV_LINKS.map((link) => (
                 <Link
                   key={link.name}
