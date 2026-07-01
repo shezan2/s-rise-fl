@@ -16,7 +16,7 @@ export default function TeamBadge({ initials, accentColor, className, size = 'md
   const sizeClasses = {
     sm: 'w-8 h-8 text-sm',
     md: 'w-12 h-12 text-2xl',
-    lg: 'w-24 h-24 text-5xl',
+    lg: 'w-20 h-20 text-3xl md:w-24 md:h-24 md:text-5xl',
   }[size] || 'w-12 h-12 text-2xl';
 
   return (

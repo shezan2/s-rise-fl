@@ -121,7 +121,7 @@ export default function Home() {
               >
                 <Link href="/teams" className="block h-full group relative overflow-hidden bg-neutral-900/50 backdrop-blur-sm border-[0.5px] border-white/10 p-6 rounded-xl transition-all hover:border-white/30 hover:-translate-y-1">
                   <div className="relative z-10 flex flex-col items-center text-center">
-                    <TeamBadge initials={team.badgeInitials} accentColor={team.accentColor} className="w-20 h-20 text-3xl mb-4" />
+                    <TeamBadge initials={team.badgeInitials} accentColor={team.accentColor} size="lg" className="mb-4" />
                     <h3 className="font-anton text-2xl mb-1">{team.name}</h3>
                     <p className="text-sm text-neutral-400">{team.stadiumName}</p>
                   </div>
