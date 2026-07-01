@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Anton } from "next/font/google";
-import Navbar from "@/components/Navbar";
+import TabBar from "@/components/TabBar";
 import SmoothScroll from "@/components/SmoothScroll";
 import "./globals.css";
 
@@ -35,11 +35,11 @@ export default function RootLayout({
           <img src="/theme-bg.jpg" alt="" className="w-full h-full object-cover opacity-50" />
         </div>
         <SmoothScroll>
-          <Navbar />
-          <main className="flex-grow flex flex-col">{children}</main>
-          <footer className="bg-black/80 backdrop-blur-md border-t border-white/10 py-6 text-center text-gray-500 text-sm">
+          <main className="flex-grow flex flex-col pb-6">{children}</main>
+          <footer className="bg-black/80 backdrop-blur-md border-t border-white/10 py-6 pb-24 md:pb-24 text-center text-gray-500 text-sm relative z-40">
             &copy; {new Date().getFullYear()} S-RISE FL. All rights reserved.
           </footer>
+          <TabBar />
         </SmoothScroll>
       </body>
     </html>

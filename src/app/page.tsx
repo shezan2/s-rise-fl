@@ -44,7 +44,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-transparent">
       {/* Hero Section */}
-      <section className="relative overflow-hidden min-h-[calc(100dvh-5rem)] flex flex-col justify-center items-center w-full">
+      <section className="relative overflow-hidden min-h-[100dvh] flex flex-col justify-center items-center w-full">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/90 pointer-events-none" />
         <motion.div 
           className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center text-center"
