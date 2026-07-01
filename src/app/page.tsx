@@ -27,15 +27,13 @@ export default function Home() {
   const showcaseTeams = teams.slice(0, 4);
 
   return (
-    <div className="flex flex-col min-h-screen bg-black">
+    <div className="flex flex-col min-h-screen bg-transparent">
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-24 pb-32">
-        <div className="absolute inset-0 bg-gradient-to-b from-neutral-900 to-black pointer-events-none" />
+      <section className="relative overflow-hidden pt-12 pb-32">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/80 pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center text-center">
-          <div className="w-32 h-32 mb-8 bg-gradient-to-br from-yellow-400 to-yellow-600 p-[2px] rounded-2xl transform rotate-3 shadow-[0_0_50px_rgba(234,179,8,0.2)]">
-            <div className="w-full h-full bg-black rounded-2xl flex items-center justify-center">
-              <Crown className="w-16 h-16 text-yellow-500" />
-            </div>
+          <div className="w-56 h-56 mb-8 relative drop-shadow-[0_0_40px_rgba(220,38,38,0.4)] hover:scale-105 transition-transform duration-500">
+            <img src="/logo.png" alt="S-Rise FL Logo" className="w-full h-full object-contain" />
           </div>
           <h1 className="font-anton text-6xl md:text-8xl tracking-tight uppercase mb-6">
             <span className="text-white">S-Rise </span>

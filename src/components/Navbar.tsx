@@ -19,16 +19,14 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="bg-black border-b border-white/10 sticky top-0 z-50">
+    <nav className="bg-black/60 backdrop-blur-md border-b border-white/10 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <div className="flex items-center">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-gradient-to-br from-yellow-500 to-yellow-700 rounded flex items-center justify-center">
-                <Trophy size={20} className="text-black" />
-              </div>
-              <span className="font-anton text-2xl text-white tracking-wider uppercase">
-                S-Rise FL
+        <div className="flex justify-between h-20">
+          <div className="flex items-center gap-4">
+            <Link href="/" className="flex items-center gap-3">
+              <img src="/logo.png" alt="S-Rise FL Logo" className="w-10 h-10 object-contain" />
+              <span className="font-anton text-2xl text-white tracking-widest uppercase">
+                S-Rise <span className="text-yellow-500">FL</span>
               </span>
             </Link>
           </div>

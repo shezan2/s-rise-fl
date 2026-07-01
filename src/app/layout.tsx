@@ -25,14 +25,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
+      <html
       lang="en"
-      className={`${inter.variable} ${anton.variable} h-full antialiased bg-black text-white`}
+      className={`${inter.variable} ${anton.variable} h-full antialiased text-white`}
     >
-      <body className="min-h-full flex flex-col font-sans">
+      <body className="min-h-full flex flex-col font-sans bg-[url('/theme-bg.jpg')] bg-cover bg-center bg-fixed">
         <Navbar />
         <main className="flex-grow">{children}</main>
-        <footer className="bg-black border-t border-white/10 py-6 text-center text-gray-500 text-sm">
+        <footer className="bg-black/80 backdrop-blur-md border-t border-white/10 py-6 text-center text-gray-500 text-sm">
           &copy; {new Date().getFullYear()} S-RISE FL. All rights reserved.
         </footer>
       </body>
