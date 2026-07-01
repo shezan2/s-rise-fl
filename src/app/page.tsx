@@ -125,7 +125,6 @@ export default function Home() {
                   <div className="relative z-10 flex flex-col items-center text-center">
                     <TeamBadge initials={team.badgeInitials} accentColor={team.accentColor} size="lg" className="mb-4" />
                     <h3 className="font-anton text-2xl mb-1">{team.name}</h3>
-                    <p className="text-sm text-neutral-400">{team.stadiumName}</p>
                   </div>
                 </Link>
               </motion.div>
