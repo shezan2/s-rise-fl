@@ -60,11 +60,11 @@ export default function StatsPage() {
 
         {/* Top Performers Section */}
         <section>
-          <div className="flex items-center justify-between mb-8">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
             <h2 className="text-3xl font-bold uppercase tracking-tight">
               Top Performers
             </h2>
-            <div className="flex bg-zinc-900 rounded-full p-1 border border-white/10">
+            <div className="flex self-start md:self-auto bg-zinc-900 rounded-full p-1 border border-white/10">
               <button 
                 onClick={() => setTopMode("goals")}
                 className={`px-6 py-2 rounded-full text-sm font-bold uppercase transition-colors ${topMode === "goals" ? "bg-red-600 text-white" : "text-zinc-400 hover:text-white"}`}
