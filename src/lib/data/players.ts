@@ -8,9 +8,6 @@ export interface Player {
   apps: number;
   goals: number;
   assists: number;
-  shots: number;
-  keyPasses: number;
-  seasonRating: number;
 }
 
 export const players: Player[] = [
@@ -23,9 +20,7 @@ export const players: Player[] = [
     "apps": 0,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "keyPasses": 0,
-    "seasonRating": 0
+
   },
   {
     "id": "p_team_1_11",
@@ -36,9 +31,7 @@ export const players: Player[] = [
     "apps": 0,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "keyPasses": 0,
-    "seasonRating": 0
+
   },
   {
     "id": "p_team_1_12",
@@ -49,9 +42,7 @@ export const players: Player[] = [
     "apps": 0,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "keyPasses": 0,
-    "seasonRating": 0
+
   },
   {
     "id": "p_team_1_13",
@@ -62,9 +53,7 @@ export const players: Player[] = [
     "apps": 0,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "keyPasses": 0,
-    "seasonRating": 0
+
   },
   {
     "id": "p_team_1_14",
@@ -75,9 +64,7 @@ export const players: Player[] = [
     "apps": 0,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "keyPasses": 0,
-    "seasonRating": 0
+
   },
   {
     "id": "p_team_1_15",
@@ -88,9 +75,7 @@ export const players: Player[] = [
     "apps": 0,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "keyPasses": 0,
-    "seasonRating": 0
+
   },
   {
     "id": "p_team_1_16",
@@ -101,9 +86,7 @@ export const players: Player[] = [
     "apps": 0,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "keyPasses": 0,
-    "seasonRating": 0
+
   },
   {
     "id": "p_team_1_17",
@@ -114,9 +97,7 @@ export const players: Player[] = [
     "apps": 0,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "keyPasses": 0,
-    "seasonRating": 0
+
   },
   {
     "id": "p_team_1_18",
@@ -127,9 +108,7 @@ export const players: Player[] = [
     "apps": 0,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "keyPasses": 0,
-    "seasonRating": 0
+
   },
   {
     "id": "p_team_1_19",
@@ -140,9 +119,7 @@ export const players: Player[] = [
     "apps": 0,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "keyPasses": 0,
-    "seasonRating": 0
+
   },
   {
     "id": "p_team_1_20",
@@ -153,9 +130,7 @@ export const players: Player[] = [
     "apps": 0,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "keyPasses": 0,
-    "seasonRating": 0
+
   },
   {
     "id": "p_team_1_21",
@@ -166,9 +141,7 @@ export const players: Player[] = [
     "apps": 0,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "keyPasses": 0,
-    "seasonRating": 0
+
   },
   {
     "id": "p_team_2_9",
@@ -179,9 +152,7 @@ export const players: Player[] = [
     "apps": 0,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "keyPasses": 0,
-    "seasonRating": 0
+
   },
   {
     "id": "p_team_2_10",
@@ -192,9 +163,7 @@ export const players: Player[] = [
     "apps": 0,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "keyPasses": 0,
-    "seasonRating": 0
+
   },
   {
     "id": "p_team_2_11",
@@ -205,9 +174,7 @@ export const players: Player[] = [
     "apps": 0,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "keyPasses": 0,
-    "seasonRating": 0
+
   },
   {
     "id": "p_team_2_12",
@@ -218,9 +185,7 @@ export const players: Player[] = [
     "apps": 0,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "keyPasses": 0,
-    "seasonRating": 0
+
   },
   {
     "id": "p_team_2_13",
@@ -231,9 +196,7 @@ export const players: Player[] = [
     "apps": 0,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "keyPasses": 0,
-    "seasonRating": 0
+
   },
   {
     "id": "p_team_2_14",
@@ -244,9 +207,7 @@ export const players: Player[] = [
     "apps": 0,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "keyPasses": 0,
-    "seasonRating": 0
+
   },
   {
     "id": "p_team_2_15",
@@ -257,9 +218,7 @@ export const players: Player[] = [
     "apps": 0,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "keyPasses": 0,
-    "seasonRating": 0
+
   },
   {
     "id": "p_team_2_16",
@@ -270,9 +229,7 @@ export const players: Player[] = [
     "apps": 0,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "keyPasses": 0,
-    "seasonRating": 0
+
   },
   {
     "id": "p_team_2_17",
@@ -283,9 +240,7 @@ export const players: Player[] = [
     "apps": 0,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "keyPasses": 0,
-    "seasonRating": 0
+
   },
   {
     "id": "p_team_2_18",
@@ -296,9 +251,7 @@ export const players: Player[] = [
     "apps": 0,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "keyPasses": 0,
-    "seasonRating": 0
+
   },
   {
     "id": "p_team_2_19",
@@ -309,9 +262,7 @@ export const players: Player[] = [
     "apps": 0,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "keyPasses": 0,
-    "seasonRating": 0
+
   },
   {
     "id": "p_team_2_20",
@@ -322,9 +273,7 @@ export const players: Player[] = [
     "apps": 0,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "keyPasses": 0,
-    "seasonRating": 0
+
   },
   {
     "id": "p_team_2_21",
@@ -335,9 +284,7 @@ export const players: Player[] = [
     "apps": 0,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "keyPasses": 0,
-    "seasonRating": 0
+
   },
   {
     "id": "p_team_2_22",
@@ -348,9 +295,7 @@ export const players: Player[] = [
     "apps": 0,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "keyPasses": 0,
-    "seasonRating": 0
+
   },
   {
     "id": "p_team_3_9",
@@ -361,9 +306,7 @@ export const players: Player[] = [
     "apps": 0,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "keyPasses": 0,
-    "seasonRating": 0
+
   },
   {
     "id": "p_team_3_10",
@@ -374,9 +317,7 @@ export const players: Player[] = [
     "apps": 0,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "keyPasses": 0,
-    "seasonRating": 0
+
   },
   {
     "id": "p_team_3_11",
@@ -387,9 +328,7 @@ export const players: Player[] = [
     "apps": 0,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "keyPasses": 0,
-    "seasonRating": 0
+
   },
   {
     "id": "p_team_3_12",
@@ -400,9 +339,7 @@ export const players: Player[] = [
     "apps": 0,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "keyPasses": 0,
-    "seasonRating": 0
+
   },
   {
     "id": "p_team_3_13",
@@ -413,9 +350,7 @@ export const players: Player[] = [
     "apps": 0,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "keyPasses": 0,
-    "seasonRating": 0
+
   },
   {
     "id": "p_team_3_14",
@@ -426,9 +361,7 @@ export const players: Player[] = [
     "apps": 0,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "keyPasses": 0,
-    "seasonRating": 0
+
   },
   {
     "id": "p_team_3_15",
@@ -439,9 +372,7 @@ export const players: Player[] = [
     "apps": 0,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "keyPasses": 0,
-    "seasonRating": 0
+
   },
   {
     "id": "p_team_3_16",
@@ -452,9 +383,7 @@ export const players: Player[] = [
     "apps": 0,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "keyPasses": 0,
-    "seasonRating": 0
+
   },
   {
     "id": "p_team_3_17",
@@ -465,9 +394,7 @@ export const players: Player[] = [
     "apps": 0,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "keyPasses": 0,
-    "seasonRating": 0
+
   },
   {
     "id": "p_team_3_18",
@@ -478,9 +405,7 @@ export const players: Player[] = [
     "apps": 0,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "keyPasses": 0,
-    "seasonRating": 0
+
   },
   {
     "id": "p_team_3_19",
@@ -491,9 +416,7 @@ export const players: Player[] = [
     "apps": 0,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "keyPasses": 0,
-    "seasonRating": 0
+
   },
   {
     "id": "p_team_3_20",
@@ -504,9 +427,7 @@ export const players: Player[] = [
     "apps": 0,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "keyPasses": 0,
-    "seasonRating": 0
+
   },
   {
     "id": "p_team_3_21",
@@ -517,9 +438,7 @@ export const players: Player[] = [
     "apps": 0,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "keyPasses": 0,
-    "seasonRating": 0
+
   },
   {
     "id": "p_team_3_22",
@@ -530,9 +449,7 @@ export const players: Player[] = [
     "apps": 0,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "keyPasses": 0,
-    "seasonRating": 0
+
   },
   {
     "id": "p_team_4_9",
@@ -543,9 +460,7 @@ export const players: Player[] = [
     "apps": 0,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "keyPasses": 0,
-    "seasonRating": 0
+
   },
   {
     "id": "p_team_4_10",
@@ -556,9 +471,7 @@ export const players: Player[] = [
     "apps": 0,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "keyPasses": 0,
-    "seasonRating": 0
+
   },
   {
     "id": "p_team_4_11",
@@ -569,9 +482,7 @@ export const players: Player[] = [
     "apps": 0,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "keyPasses": 0,
-    "seasonRating": 0
+
   },
   {
     "id": "p_team_4_12",
@@ -582,9 +493,7 @@ export const players: Player[] = [
     "apps": 0,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "keyPasses": 0,
-    "seasonRating": 0
+
   },
   {
     "id": "p_team_4_13",
@@ -595,9 +504,7 @@ export const players: Player[] = [
     "apps": 0,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "keyPasses": 0,
-    "seasonRating": 0
+
   },
   {
     "id": "p_team_4_14",
@@ -608,9 +515,7 @@ export const players: Player[] = [
     "apps": 0,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "keyPasses": 0,
-    "seasonRating": 0
+
   },
   {
     "id": "p_team_4_15",
@@ -621,9 +526,7 @@ export const players: Player[] = [
     "apps": 0,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "keyPasses": 0,
-    "seasonRating": 0
+
   },
   {
     "id": "p_team_4_16",
@@ -634,9 +537,7 @@ export const players: Player[] = [
     "apps": 0,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "keyPasses": 0,
-    "seasonRating": 0
+
   },
   {
     "id": "p_team_4_17",
@@ -647,9 +548,7 @@ export const players: Player[] = [
     "apps": 0,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "keyPasses": 0,
-    "seasonRating": 0
+
   },
   {
     "id": "p_team_4_18",
@@ -660,9 +559,7 @@ export const players: Player[] = [
     "apps": 0,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "keyPasses": 0,
-    "seasonRating": 0
+
   },
   {
     "id": "p_team_4_19",
@@ -673,9 +570,7 @@ export const players: Player[] = [
     "apps": 0,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "keyPasses": 0,
-    "seasonRating": 0
+
   },
   {
     "id": "p_team_4_20",
@@ -686,9 +581,7 @@ export const players: Player[] = [
     "apps": 0,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "keyPasses": 0,
-    "seasonRating": 0
+
   },
   {
     "id": "p_team_4_21",
@@ -699,8 +592,6 @@ export const players: Player[] = [
     "apps": 0,
     "goals": 0,
     "assists": 0,
-    "shots": 0,
-    "keyPasses": 0,
-    "seasonRating": 0
+
   }
 ];

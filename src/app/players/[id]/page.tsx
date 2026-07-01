@@ -32,8 +32,6 @@ export default async function PlayerPage({
   // Calculate max values for performance bars (based on league max)
   const maxGoals = Math.max(...players.map(p => p.goals));
   const maxAssists = Math.max(...players.map(p => p.assists));
-  const maxShots = Math.max(...players.map(p => p.shots));
-  const maxKeyPasses = Math.max(...players.map(p => p.keyPasses));
 
   return (
     <div className="min-h-screen bg-black text-white p-6 md:p-12 font-sans">
@@ -71,16 +69,16 @@ export default async function PlayerPage({
             </div>
 
             <div className="flex-shrink-0 text-center">
-              <div className="text-6xl md:text-8xl font-black text-amber-400 tabular-nums tracking-tighter">
-                {player.seasonRating.toFixed(1)}
+              <div className="text-6xl md:text-8xl font-black text-white tabular-nums tracking-tighter">
+                {player.goals}
               </div>
-              <div className="text-sm font-bold uppercase tracking-widest text-zinc-500 mt-2">Season Rating</div>
+              <div className="text-sm font-bold uppercase tracking-widest text-zinc-500 mt-2">Season Goals</div>
             </div>
           </div>
         </div>
 
-        {/* 4 Stat Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Stat Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <StatCard 
             title="Goals" 
             value={player.goals} 
@@ -94,20 +92,6 @@ export default async function PlayerPage({
             max={maxAssists} 
             icon={<Target className="w-5 h-5" />} 
             color="bg-blue-500" 
-          />
-          <StatCard 
-            title="Shots" 
-            value={player.shots} 
-            max={maxShots} 
-            icon={<Zap className="w-5 h-5" />} 
-            color="bg-amber-500" 
-          />
-          <StatCard 
-            title="Key Passes" 
-            value={player.keyPasses} 
-            max={maxKeyPasses} 
-            icon={<Activity className="w-5 h-5" />} 
-            color="bg-emerald-500" 
           />
         </div>
 

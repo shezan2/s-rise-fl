@@ -1,14 +1,16 @@
+"use client";
+
 import Link from "next/link";
-import { Crown, ArrowRight, Trophy, CalendarDays, Newspaper } from "lucide-react";
+import { ArrowRight, CalendarDays, Trophy } from "lucide-react";
 import { teams } from "@/lib/data/teams";
 import { matches } from "@/lib/data/matches";
 import MatchRow, { MatchData } from "@/components/MatchRow";
 import TeamBadge from "@/components/TeamBadge";
+import { motion } from "framer-motion";
 
 export default function Home() {
   const upcomingMatches = matches
     .filter((m) => m.status === "upcoming" || m.status === "live")
-    .slice(0, 3)
     .slice(0, 2)
     .map((m): MatchData => {
       const homeTeam = teams.find((t) => t.id === m.homeTeamId)!;
@@ -24,85 +26,127 @@ export default function Home() {
 
   const showcaseTeams = teams.slice(0, 4);
 
+  const staggerContainer: any = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const fadeUp: any = {
+    hidden: { opacity: 0, y: 30 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+  };
+
   return (
     <div className="flex flex-col min-h-screen bg-transparent">
       {/* Hero Section */}
       <section className="relative overflow-hidden pt-12 pb-32">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/80 pointer-events-none" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center text-center">
-          <div className="w-56 h-56 mb-8 relative drop-shadow-[0_0_40px_rgba(220,38,38,0.4)] hover:scale-105 transition-transform duration-500">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/90 pointer-events-none" />
+        <motion.div 
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center text-center"
+          initial="hidden" animate="show" variants={staggerContainer}
+        >
+          <motion.div variants={fadeUp} className="w-40 h-40 md:w-56 md:h-56 mb-8 relative drop-shadow-[0_0_40px_rgba(220,38,38,0.4)]">
             <img src="/logo.png" alt="S-Rise FL Logo" className="w-full h-full object-contain" />
-          </div>
-          <h1 className="font-anton text-6xl md:text-8xl tracking-tight uppercase mb-6">
+          </motion.div>
+          
+          <motion.h1 variants={fadeUp} className="font-anton text-5xl md:text-8xl tracking-tight uppercase mb-6">
             <span className="text-white">S-Rise </span>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600">
               FL
             </span>
-          </h1>
-          <p className="max-w-2xl text-xl text-neutral-400 mb-10 font-medium">
+          </motion.h1>
+          
+          <motion.p variants={fadeUp} className="max-w-2xl text-lg md:text-xl text-neutral-400 mb-10 font-medium px-4">
             The pinnacle of domestic football. Experience the drama, passion, and unparalleled glory of the S-Rise Football League.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
+          </motion.p>
+          
+          <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto px-4">
             <Link
               href="/matches"
-              className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-black uppercase tracking-wider bg-yellow-500 hover:bg-yellow-400 transition-colors rounded-none"
+              className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-base font-bold text-black uppercase tracking-wider bg-yellow-500 hover:bg-yellow-400 transition-colors rounded-none"
             >
               Explore Fixtures
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
             <Link
               href="/bracket"
-              className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white uppercase tracking-wider border-2 border-white/20 hover:border-white hover:bg-white/5 transition-colors rounded-none"
+              className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white uppercase tracking-wider border-2 border-white/20 hover:border-white hover:bg-white/5 transition-colors rounded-none"
             >
               View Bracket
             </Link>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </section>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 w-full space-y-24">
-        {/* Tournament Info & Upcoming Fixtures */}
-        <div className="flex flex-col gap-12">
-
-          {/* Upcoming Matches */}
+        {/* Upcoming Fixtures */}
+        <motion.div 
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8 }}
+          className="flex flex-col gap-12"
+        >
           <section>
             <div className="flex items-center justify-between mb-6">
-              <h2 className="font-anton text-3xl text-white uppercase tracking-wider flex items-center gap-3">
-                <CalendarDays className="w-8 h-8 text-red-500" />
+              <h2 className="font-anton text-2xl md:text-3xl text-white uppercase tracking-wider flex items-center gap-3">
+                <CalendarDays className="w-6 h-6 md:w-8 md:h-8 text-red-500" />
                 Next Fixtures
               </h2>
-              <Link href="/matches" className="text-sm text-red-500 hover:text-red-400 font-bold uppercase tracking-wider">
+              <Link href="/matches" className="text-xs md:text-sm text-red-500 hover:text-red-400 font-bold uppercase tracking-wider">
                 All Matches →
               </Link>
             </div>
             <div className="flex flex-col gap-4">
               {upcomingMatches.map((match) => (
-                <div key={match.id} className="border border-white/10 rounded-xl overflow-hidden">
+                <motion.div 
+                  whileHover={{ scale: 1.02 }}
+                  key={match.id} 
+                  className="border border-white/10 rounded-xl overflow-hidden"
+                >
                   <MatchRow match={match} />
-                </div>
+                </motion.div>
               ))}
             </div>
           </section>
-        </div>
+        </motion.div>
 
         {/* Featured Teams Grid */}
-        <section>
+        <motion.section
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8 }}
+        >
           <h2 className="font-anton text-3xl text-white uppercase tracking-wider mb-8 text-center">
             Featured Clubs
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {showcaseTeams.map((team) => (
-              <Link href="/teams" key={team.id} className="group relative overflow-hidden bg-neutral-900 border border-white/10 p-6 rounded-xl transition-all hover:border-white/30 hover:-translate-y-1">
-                <div className="absolute top-0 right-0 w-32 h-32 opacity-10 transform translate-x-8 -translate-y-8 group-hover:scale-110 transition-transform duration-500" style={{ backgroundColor: team.accentColor, filter: 'blur(40px)' }} />
-                <div className="relative z-10 flex flex-col items-center text-center">
-                  <TeamBadge initials={team.badgeInitials} accentColor={team.accentColor} className="w-20 h-20 text-3xl mb-4 shadow-xl" />
-                  <h3 className="font-anton text-2xl mb-1">{team.name}</h3>
-                  <p className="text-sm text-neutral-400">{team.stadiumName}</p>
-                </div>
-              </Link>
+            {showcaseTeams.map((team, idx) => (
+              <motion.div
+                key={team.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+              >
+                <Link href="/teams" className="block h-full group relative overflow-hidden bg-neutral-900 border border-white/10 p-6 rounded-xl transition-all hover:border-white/30 hover:-translate-y-1">
+                  <div className="absolute top-0 right-0 w-32 h-32 opacity-10 transform translate-x-8 -translate-y-8 group-hover:scale-110 transition-transform duration-500" style={{ backgroundColor: team.accentColor, filter: 'blur(40px)' }} />
+                  <div className="relative z-10 flex flex-col items-center text-center">
+                    <TeamBadge initials={team.badgeInitials} accentColor={team.accentColor} className="w-20 h-20 text-3xl mb-4 shadow-xl" />
+                    <h3 className="font-anton text-2xl mb-1">{team.name}</h3>
+                    <p className="text-sm text-neutral-400">{team.stadiumName}</p>
+                  </div>
+                </Link>
+              </motion.div>
             ))}
           </div>
-        </section>
+        </motion.section>
       </div>
     </div>
   );

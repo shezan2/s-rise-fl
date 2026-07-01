@@ -66,9 +66,6 @@ export default async function TeamPage({ params }: { params: Promise<{ id: strin
                 <th className="p-4 text-right">Apps</th>
                 <th className="p-4 text-right">Goals</th>
                 <th className="p-4 text-right">Assists</th>
-                <th className="p-4 text-right">Shots</th>
-                <th className="p-4 text-right">Key Passes</th>
-                <th className="p-4 text-right">Rating</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-white/5 text-sm">
@@ -89,13 +86,6 @@ export default async function TeamPage({ params }: { params: Promise<{ id: strin
                   <td className="p-4 text-right font-medium">{player.apps}</td>
                   <td className="p-4 text-right font-medium text-white">{player.goals}</td>
                   <td className="p-4 text-right font-medium text-gray-300">{player.assists}</td>
-                  <td className="p-4 text-right text-gray-500">{player.shots}</td>
-                  <td className="p-4 text-right text-gray-500">{player.keyPasses}</td>
-                  <td className="p-4 text-right">
-                    <span className="font-anton text-lg" style={{ color: team.accentColor }}>
-                      {player.seasonRating.toFixed(1)}
-                    </span>
-                  </td>
                 </tr>
               ))}
               {teamPlayers.length === 0 && (

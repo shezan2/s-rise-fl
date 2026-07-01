@@ -6,7 +6,7 @@ import { teams } from "@/lib/data/teams";
 import Link from "next/link";
 import { ArrowDown, ArrowUp, ChevronRight, Trophy } from "lucide-react";
 
-type SortField = "goals" | "assists" | "shots" | "keyPasses" | "apps" | "seasonRating";
+type SortField = "goals" | "assists" | "apps";
 type SortOrder = "asc" | "desc";
 
 export default function StatsPage() {
@@ -146,15 +146,6 @@ export default function StatsPage() {
                     <th className="p-4 font-bold cursor-pointer hover:text-white transition-colors" onClick={() => handleSort("assists")}>
                       Assists <SortIcon field="assists" />
                     </th>
-                    <th className="p-4 font-bold cursor-pointer hover:text-white transition-colors" onClick={() => handleSort("shots")}>
-                      Shots <SortIcon field="shots" />
-                    </th>
-                    <th className="p-4 font-bold cursor-pointer hover:text-white transition-colors" onClick={() => handleSort("keyPasses")}>
-                      Key Passes <SortIcon field="keyPasses" />
-                    </th>
-                    <th className="p-4 font-bold cursor-pointer hover:text-white transition-colors" onClick={() => handleSort("seasonRating")}>
-                      Rating <SortIcon field="seasonRating" />
-                    </th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-white/5">
@@ -180,9 +171,6 @@ export default function StatsPage() {
                         </td>
                         <td className="p-4 font-bold text-white">{player.goals}</td>
                         <td className="p-4 text-zinc-300">{player.assists}</td>
-                        <td className="p-4 text-zinc-400">{player.shots}</td>
-                        <td className="p-4 text-zinc-400">{player.keyPasses}</td>
-                        <td className="p-4 font-black text-amber-400">{player.seasonRating.toFixed(1)}</td>
                       </tr>
                     );
                   })}

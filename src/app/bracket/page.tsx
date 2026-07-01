@@ -5,6 +5,7 @@ import { matches } from "@/lib/data/matches";
 import { teams } from "@/lib/data/teams";
 import MatchRow, { MatchData } from "@/components/MatchRow";
 import { Trophy } from "lucide-react";
+import { motion } from "framer-motion";
 
 function formatMatch(m: any): MatchData {
   const homeTeam = teams.find((t) => t.id === m.homeTeamId);
@@ -28,76 +29,101 @@ export default function BracketPage() {
   const final = matches.find(m => m.stage === "S-Rise Final");
 
   return (
-    <div className="min-h-screen bg-transparent pt-12 pb-24 relative">
+    <div className="min-h-screen bg-transparent pt-12 pb-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/80 pointer-events-none" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        <div className="mb-16 text-center">
-          <h1 className="font-anton text-5xl md:text-6xl text-white uppercase tracking-wider flex items-center justify-center gap-4 mb-4">
-            <Trophy className="w-12 h-12 text-yellow-500" />
+        <motion.div 
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="mb-12 md:mb-16 text-center"
+        >
+          <h1 className="font-anton text-4xl md:text-6xl text-white uppercase tracking-wider flex items-center justify-center gap-2 md:gap-4 mb-4">
+            <Trophy className="w-8 h-8 md:w-12 md:h-12 text-yellow-500" />
             Tournament Bracket
           </h1>
-          <p className="text-neutral-400 text-lg">
-            S-Rise Invitational 2026 • 4 July • ActiveSG Sport Village Jurong Town
+          <p className="text-neutral-400 text-sm md:text-lg">
+            S-Rise Invitational 2026 • 4 July • ActiveSG Sport Village
           </p>
-        </div>
+        </motion.div>
 
         {/* Bracket Container */}
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-24 relative mt-12">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-24 relative mt-8 md:mt-12">
           
           {/* Connecting Lines for Desktop */}
-          <div className="hidden lg:block absolute inset-0 pointer-events-none">
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.8, duration: 1 }}
+            className="hidden lg:block absolute inset-0 pointer-events-none"
+          >
             {/* Top Semi to Final Line */}
             <div className="absolute top-[20%] left-[calc(50%-6rem)] w-[6rem] h-[30%] border-t-2 border-r-2 border-white/20 rounded-tr-xl" />
             {/* Bottom Semi to Final Line */}
             <div className="absolute bottom-[20%] left-[calc(50%-6rem)] w-[6rem] h-[30%] border-b-2 border-r-2 border-white/20 rounded-br-xl" />
             {/* Connector into Final */}
             <div className="absolute top-[50%] left-[50%] w-[4rem] h-[2px] bg-white/20" />
-          </div>
+          </motion.div>
 
           {/* Semifinals Column */}
-          <div className="flex flex-col gap-24 z-10 w-full max-w-md">
-            {semiFinals.map((match) => (
-              <div key={match.id} className="relative group">
+          <div className="flex flex-col gap-12 md:gap-24 z-10 w-full max-w-md">
+            {semiFinals.map((match, idx) => (
+              <motion.div 
+                key={match.id} 
+                className="relative group"
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: idx * 0.2 }}
+              >
                 <div className="absolute -top-4 -left-4 w-12 h-12 bg-red-600/20 blur-xl rounded-full group-hover:bg-red-600/40 transition-colors" />
-                <h3 className="text-red-500 font-anton tracking-wider uppercase mb-3 text-xl relative">
+                <h3 className="text-red-500 font-anton tracking-wider uppercase mb-3 text-lg md:text-xl relative">
                   {match.stage}
                 </h3>
-                <div className="bg-black/60 backdrop-blur-md border border-white/10 rounded-xl overflow-hidden shadow-2xl relative">
+                <div className="bg-black/60 backdrop-blur-md border border-white/10 rounded-xl overflow-hidden shadow-2xl relative transition-transform duration-300 hover:scale-105">
                   <MatchRow match={formatMatch(match)} />
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
 
           {/* Finals Column */}
-          <div className="flex flex-col gap-12 justify-center z-10 w-full max-w-md mt-12 lg:mt-0">
+          <div className="flex flex-col gap-10 md:gap-12 justify-center z-10 w-full max-w-md mt-6 lg:mt-0">
             {final && (
-              <div className="relative group">
+              <motion.div 
+                className="relative group"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+              >
                 <div className="absolute inset-0 bg-yellow-500/20 blur-2xl rounded-full group-hover:bg-yellow-500/40 transition-colors" />
-                <div className="absolute -top-12 left-1/2 -translate-x-1/2 bg-yellow-500 text-black px-6 py-2 rounded-t-xl font-bold uppercase tracking-widest text-sm shadow-[0_0_20px_rgba(234,179,8,0.3)]">
+                <div className="absolute -top-8 md:-top-12 left-1/2 -translate-x-1/2 bg-yellow-500 text-black px-6 py-2 rounded-t-xl font-bold uppercase tracking-widest text-xs md:text-sm shadow-[0_0_20px_rgba(234,179,8,0.3)]">
                   The Final
                 </div>
-                <div className="bg-black/80 backdrop-blur-md border-2 border-yellow-500/50 rounded-xl overflow-hidden shadow-[0_0_40px_rgba(234,179,8,0.15)] relative">
+                <div className="bg-black/80 backdrop-blur-md border-2 border-yellow-500/50 rounded-xl overflow-hidden shadow-[0_0_40px_rgba(234,179,8,0.15)] relative transition-transform duration-300 hover:scale-105 z-20">
                   <MatchRow match={formatMatch(final)} />
                 </div>
-              </div>
+              </motion.div>
             )}
 
             {thirdPlace && (
-              <div className="relative group mt-8 lg:mt-16">
-                <div className="absolute -top-10 left-1/2 -translate-x-1/2 bg-neutral-800 text-white px-6 py-1 rounded-t-xl font-bold uppercase tracking-widest text-xs border border-b-0 border-white/10">
+              <motion.div 
+                className="relative group mt-6 lg:mt-16"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.8 }}
+              >
+                <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-neutral-800 text-white px-6 py-1 rounded-t-xl font-bold uppercase tracking-widest text-[10px] md:text-xs border border-b-0 border-white/10">
                   3rd Place
                 </div>
-                <div className="bg-black/60 backdrop-blur-md border border-white/10 rounded-xl overflow-hidden shadow-xl relative">
+                <div className="bg-black/60 backdrop-blur-md border border-white/10 rounded-xl overflow-hidden shadow-xl relative transition-transform duration-300 hover:scale-105">
                   <MatchRow match={formatMatch(thirdPlace)} />
                 </div>
-              </div>
+              </motion.div>
             )}
           </div>
 
         </div>
-
       </div>
     </div>
   );
