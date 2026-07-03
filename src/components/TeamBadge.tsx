@@ -25,6 +25,8 @@ export default function TeamBadge({ teamId, initials, accentColor, className, si
     sm: 'w-8 h-8 text-sm',
     md: 'w-12 h-12 text-2xl',
     lg: 'w-20 h-20 text-3xl md:w-24 md:h-24 md:text-5xl',
+    xl: 'w-32 h-32 text-4xl md:w-48 md:h-48 md:text-6xl',
+    '2xl': 'w-48 h-48 text-5xl md:w-64 md:h-64 md:text-7xl',
   }[size] || 'w-12 h-12 text-2xl';
 
   if (logoUrl) {
