@@ -31,13 +31,12 @@ export default function TeamBadge({ teamId, initials, accentColor, className, si
     return (
       <div
         className={cn(
-          "rounded-full flex items-center justify-center relative overflow-hidden bg-white/10 border-2",
+          "flex items-center justify-center relative",
           sizeClasses,
           className
         )}
-        style={{ borderColor: finalAccentColor }}
       >
-        <Image src={logoUrl} alt={finalInitials} fill className="object-contain p-2" />
+        <Image src={logoUrl} alt={finalInitials} fill className="object-contain" />
       </div>
     );
   }
